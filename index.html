@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      background: rgba(0,0,0,0.3);
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    button {
+      background: #fff;
+      border: none;
+      color: #f06;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #f8bbd0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi, today is your birthday, right?</h1>
+    <button onclick="goToBirthday()">Click This</button>
+  </div>
+
+  <script>
+    function goToBirthday() {
+      window.location.href = 'birthday.html';
+    }
+  </script>
+</body>
+</html>

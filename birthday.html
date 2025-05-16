@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="glow">Happy birthday</h1>
+    <p class="glow">Semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya</p>
+    <div class="cake" onclick="startCelebration()">🎂</div>
+    <p class="click-note">(Click the cake to start the celebration 🎵🎈)</p>
+    <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+  </div>
+
+  <!-- <div>
+    <p class="glow">sorry, I can only give it like this</p>
+  </div> -->
+
+  <div id="balloon-container"></div>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="sender">From: L</div>
+
+  <script src="script.js"></script>
+
+  <div id="end-message" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(18px, 5vw, 28px);
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 9999;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 0 15px #ff69b4;
+">
+  Sorry, I can only give it like this.
+</div>
+
+</body>
+</html>

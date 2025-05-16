@@ -1,0 +1,129 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%; /* prevent font scaling on iOS */
+  -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(270deg, #ffe6f0, #ccf2ff, #e6ffe6, #fff0b3);
+  background-size: 800% 800%;
+  animation: backgroundFlow 20s ease infinite;
+  text-align: center;
+  color: #333;
+  height: 100vh;
+  overflow-y: hidden; /* avoid vertical scroll on mobile */
+}
+
+@keyframes backgroundFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  margin-top: 80px;
+  padding: 0 10px;
+}
+
+h1 {
+  font-size: 7vw;
+  max-font-size: 48px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 4vw;
+  max-font-size: 24px;
+  margin: 0.5em 0;
+}
+
+.glow {
+  color: #fff;
+  text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66cc, 0 0 30px #ff3399;
+}
+
+.click-note {
+  font-size: 3vw;
+  max-font-size: 16px;
+  color: #222;
+}
+
+.cake {
+  font-size: 15vw; /* responsive size */
+  max-font-size: 80px;
+  max-width: 80px;
+  animation: bounceGlow 2s infinite ease-in-out;
+  margin: 20px auto;
+  filter: drop-shadow(0 0 10px #ff69b4);
+  cursor: pointer;
+}
+
+@keyframes bounceGlow {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 10px #ff69b4);
+  }
+  50% {
+    transform: translateY(-15px);
+    filter: drop-shadow(0 0 25px #ff1493);
+  }
+}
+
+#balloon-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 8vw;
+  max-width: 40px;
+  height: 10vw;
+  max-height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  animation: float 8s linear infinite;
+  opacity: 0.8;
+  transform: rotate(45deg);
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-120vh) rotate(360deg); }
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Sender name at bottom right */
+.sender {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  font-size: 3vw;
+  max-font-size: 16px;
+  color: #555;
+  font-style: italic;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
