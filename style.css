@@ -3,17 +3,18 @@ html, body {
   padding: 0;
   max-width: 100vw;
   overflow-x: hidden;
-  -webkit-text-size-adjust: 100%; /* prevent font scaling on iOS */
-  -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(270deg, #ffe6f0, #ccf2ff, #e6ffe6, #fff0b3);
   background-size: 800% 800%;
   animation: backgroundFlow 20s ease infinite;
   text-align: center;
   color: #333;
   height: 100vh;
-  overflow-y: hidden; /* avoid vertical scroll on mobile */
+  overflow-y: hidden;
 }
+
 
 @keyframes backgroundFlow {
   0% { background-position: 0% 50%; }
